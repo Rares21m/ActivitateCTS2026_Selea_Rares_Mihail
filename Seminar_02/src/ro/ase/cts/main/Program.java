@@ -10,19 +10,29 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 
-
 public class Program {
 
-	public static void main(String[] args) {
-		List<Aplicant> listaAngajati;
-		try {
-			listaAngajati=new ReaderAngajati().readAplicanti("angajati.txt");
-			for(Aplicant aplicant:listaAngajati)
-				System.out.println(aplicant.toString());
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        List<Aplicant> listaAngajati;
+        Aplicant.setPragPunctaj(85);
+        try {
+//			listaAngajati=new ReaderAngajati().readAplicanti("angajati.txt");
+            //Este o varianta in regula dar daca vreau sa citesc din mai multe fisiere trebuie sa declar mai multe readere
+//			Mai multe obiecte de tip reader
+//
+
+            ReaderAplicanti ra = new ReaderAngajati("angajati.txt");
+            listaAngajati = ra.readAplicanti();
+            for (Aplicant aplicant : listaAngajati) {
+                System.out.println(aplicant.toString());
+                aplicant.afisareVenit();
+                aplicant.afisareStatut();
+            }
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
 }

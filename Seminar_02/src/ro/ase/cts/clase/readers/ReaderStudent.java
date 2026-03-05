@@ -12,16 +12,19 @@ import java.util.Scanner;
 public class ReaderStudent extends ReaderAplicanti {
 
 
+    public ReaderStudent(String numeFisier) {
+        super(numeFisier);
+    }
 
     @Override
-    public List<Aplicant> readAplicanti(String file) throws FileNotFoundException {
-        Scanner input = new Scanner(new File(file));
+    public List<Aplicant> readAplicanti() throws FileNotFoundException {
+        Scanner input = new Scanner(new File(super.numeFisier));
         input.useDelimiter(",|\n");
         List<Aplicant> studenti = new ArrayList<>();
 
         while (input.hasNext()) {
             Student s = new Student();
-            super.citesteAplicant(input,s);
+            super.citesteAplicant(input, s);
             int an_studii = input.nextInt();
             s.setAn_studii(an_studii);
             String facultate = (input.next()).toString();
@@ -31,6 +34,6 @@ public class ReaderStudent extends ReaderAplicanti {
         input.close();
         return studenti;
 
-        //TODO acasa sa nu uit sa fac si pentru restul claselor readerPupil readerAngajati !!!
+
     }
 }

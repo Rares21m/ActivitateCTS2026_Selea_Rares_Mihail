@@ -1,4 +1,5 @@
 package ro.ase.cts.clase.readers;
+
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 
@@ -7,9 +8,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class ReaderAplicanti {
-    public abstract List<Aplicant> readAplicanti(String file) throws FileNotFoundException;
 
-    public void citesteAplicant(Scanner input, Aplicant aplicant){
+    protected String numeFisier;
+
+    public ReaderAplicanti(String numeFisier) {
+        this.numeFisier = numeFisier;
+    }
+
+    public abstract List<Aplicant> readAplicanti() throws FileNotFoundException;
+
+    public void citesteAplicant(Scanner input, Aplicant aplicant) {
         String nume = input.next();
         aplicant.setNume(nume);
         String prenume = (input.next()).toString();
@@ -22,8 +30,8 @@ public abstract class ReaderAplicanti {
         String[] vect = new String[nr];
         for (int i = 0; i < nr; i++)
             vect[i] = input.next();
-        aplicant.setNr_proiecte(nr,vect);
-        Aplicant a=new Angajat();
+        aplicant.setNrProiecte(nr, vect);
+        Aplicant a = new Angajat();
     }
 
 
