@@ -1,6 +1,6 @@
-package cts.ase.fabrici;
+package cts.ase.FactoryMethod.clase.fabrici;
 
-import cts.ase.clase.FelDeMancare;
+import cts.ase.FactoryMethod.clase.FelDeMancare;
 
 public interface FelDeMancareFabrica {
     public FelDeMancare getFelDeMancare(TipFelDeMancare tip,float gramaj,String denumire,int calorii);

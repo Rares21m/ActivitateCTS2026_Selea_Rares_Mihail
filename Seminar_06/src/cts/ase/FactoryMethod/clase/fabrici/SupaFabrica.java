@@ -1,8 +1,8 @@
-package cts.ase.fabrici;
+package cts.ase.FactoryMethod.clase.fabrici;
 
-import cts.ase.clase.Ciorba;
-import cts.ase.clase.FelDeMancare;
-import cts.ase.clase.SupaCrema;
+import cts.ase.FactoryMethod.clase.Ciorba;
+import cts.ase.FactoryMethod.clase.FelDeMancare;
+import cts.ase.FactoryMethod.clase.SupaCrema;
 
 public class SupaFabrica implements FelDeMancareFabrica{
     @Override

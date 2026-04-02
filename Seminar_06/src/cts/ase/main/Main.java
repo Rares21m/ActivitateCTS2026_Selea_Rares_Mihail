@@ -1,9 +1,7 @@
 package cts.ase.main;
 
-import cts.ase.clase.FelDeMancare;
-import cts.ase.clase.Supa;
-import cts.ase.clase.SupaCrema;
-import cts.ase.fabrici.*;
+import cts.ase.FactoryMethod.clase.FelDeMancare;
+import cts.ase.FactoryMethod.clase.fabrici.*;
 
 public class Main {
     public static void main(String[] args) {

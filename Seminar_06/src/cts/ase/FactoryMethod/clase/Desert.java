@@ -1,4 +1,4 @@
-package cts.ase.clase;
+package cts.ase.FactoryMethod.clase;
 
 public abstract class Desert implements FelDeMancare{
     protected float gramaj;

@@ -1,8 +1,8 @@
-package cts.ase.fabrici;
+package cts.ase.FactoryMethod.clase.fabrici;
 
-import cts.ase.clase.Clatite;
-import cts.ase.clase.FelDeMancare;
-import cts.ase.clase.Papanas;
+import cts.ase.FactoryMethod.clase.Clatite;
+import cts.ase.FactoryMethod.clase.FelDeMancare;
+import cts.ase.FactoryMethod.clase.Papanas;
 
 public class DesertFabrica implements FelDeMancareFabrica{
     @Override

@@ -1,4 +1,6 @@
-package cts.ase.Prototype;
+package cts.ase.Prototype.clase;
 
-public class RezervarePrototype {
+public interface IRezervare {
+    public IRezervare copiaza();
+
 }
